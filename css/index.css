@@ -1,0 +1,139 @@
+/* 로고 부분*/
+#logo {
+  position: absolute;
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding-left: 30px;
+  left: 10px;
+  bottom: 10px;
+  width: 100px;
+  transform: translateY(-50%);
+}
+
+/* 헤더 부분 */
+#header {
+  background-color: #ddd;
+  position: relative;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+#gnbList {
+  display: flex;
+}
+
+#gnbList li {
+  width: 100px;
+}
+
+#gnbList li a {
+  display: block;
+  padding: 20px 20px;
+}
+#gnbList li a:hover {
+  color: white;
+  background-color: #bbb;
+}
+
+/* 사진 부분 */
+.banner {
+  margin-top: 35px;
+  padding: 50px 0;
+  background-color: #ddd;
+}
+
+.bannerList {
+  display: flex;
+  justify-content: center;
+}
+
+.bannerList li {
+  border: 3px solid #ddd;
+}
+.bannerList li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 150px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.bannerList li a:hover img {
+  height: 120%;
+}
+
+.bannerList li img {
+  height: 100%;
+  transition: 0.25s;
+}
+
+.bannerList li:nth-of-type(2) {
+  margin: 0 20px;
+}
+/* 슬라이드 구현 */
+.container {
+  width: 100vw;
+  height: 300px;
+  background-color: rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.wrapper {
+  display: flex;
+  width: 300%;
+  height: 100%;
+  transform: translateX(-200vw);
+  transition: 0.25s;
+}
+
+.item {
+  list-style: none;
+  flex: 1;
+}
+
+.btns {
+  margin-top: 30px;
+}
+
+.btns ul {
+  display: flex;
+  justify-content: center;
+}
+
+.btns ul li {
+  list-style: none;
+  margin: 0 10px;
+}
+
+.btns ul li button {
+  width: 50px;
+  height: 20px;
+}
+
+.btnChat {
+  width: 50px;
+  height: 50px;
+
+  border: 3px solid black;
+  border-radius: 50%;
+
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  padding: 9px 17px;
+  font-weight: bold;
+  font-size: 25px;
+  animation: slideUp 0.5s;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 0;
+  }
+}
